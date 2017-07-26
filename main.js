@@ -56,7 +56,7 @@ console.log(allProducts);
 var productContainer = document.getElementById("product-container");
 
 for(var i = 0; i < allProducts.length; i++) {
-	
+	debugger;
 	var currentProduct = allProducts[i];
 	var domString = "";
 
@@ -71,7 +71,15 @@ for(var i = 0; i < allProducts.length; i++) {
     domString +=      '<p>' + currentProduct.description + '</p>';
     domString +=      '<h6>$' + currentProduct.price + '</h6>';
     domString +=    '</div>';
+
+     if(currentProduct.soldOut) {
+      domString += '<div class="sold-out">';
+      domString +=    '<img src="./images/soldOut.png" alt="Sold Out">';
+      domString += '</div>';
+    }
     domString +=  '</section>';
+
+
 
  	productContainer.innerHTML += domString;
 }
