@@ -64,5 +64,8 @@ body {
 	top: 90px;
 }
 
+.border {
+	border: 3px dotted purple;
+}
 
 
